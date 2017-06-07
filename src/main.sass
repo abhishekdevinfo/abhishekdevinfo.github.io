@@ -1,0 +1,142 @@
+$family: unquote('Dancing+Script')
+$family2: unquote('Bubbler+One')
+@import url('https://fonts.googleapis.com/css?family=#{$family}')
+@import url('https://fonts.googleapis.com/css?family=#{$family2}')
+$font-dance: 'Dancing Script', cursive
+$font-buble: 'Bubbler One', sans-serif
+
+$default-font-color: #fff
+$default-bg-color: #252627
+
+*, *::after, *::before
+  box-sizing: border-box
+  -moz-osx-font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizeLegibility
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+
+
+ol
+  list-style: decimal
+  padding-left: 1.4em
+
+ul
+  padding-left: 1.4em
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+html
+  font-family: sans-serif
+
+body
+  background-color: $default-bg-color
+  color: $default-font-color
+  height: 100vh
+  line-height: 1.2
+  overflow: hidden
+  user-select: none
+
+.wrapper
+  position: absolute
+  width: 100%
+  height: 100%
+
+.outer-container
+  margin: 0 auto
+  max-width: 1280px
+  padding-left: .5em
+  padding-right: .5em
+  width: 100%
+
+header
+  a
+    color: $default-font-color
+    text-decoration: none
+
+  .outer-container > div
+    display: inline-block
+
+  .outer-container
+    margin-bottom: 1.5em
+    padding-top: 4em
+
+  .info
+    float: right
+
+    .info-a
+      height: 38px
+      width: 185px
+      text-transform: uppercase
+      text-align: center
+      font-weight: 600
+      font-size: .9em
+      border: 5px solid $default-font-color
+      padding: 13px 43px
+      -moz-transition: all 2s cubic-bezier(.165,.84,.44,1);
+      -o-transition: all 2s cubic-bezier(.165,.84,.44,1);
+      -webkit-transition: all 2s cubic-bezier(.165,.84,.44,1);
+      transition: all 2s cubic-bezier(.165,.84,.44,1)
+
+      &:hover
+        background-color: $default-font-color
+        color: $default-bg-color
+
+  .icon-a
+    border: 5px solid $default-font-color
+    padding: 13px 13px
+    font-weight: 600
+    -moz-transition: all 2s cubic-bezier(.165,.84,.44,1);
+    -o-transition: all 2s cubic-bezier(.165,.84,.44,1);
+    -webkit-transition: all 2s cubic-bezier(.165,.84,.44,1);
+    transition: all 2s cubic-bezier(.165,.84,.44,1)    
+
+    &:hover      
+      background-color: $default-font-color
+      color: $default-bg-color
+
+.content
+  .inner-container
+    // height: 20rem
+    position: absolute
+    left: 20%
+    top: 50%
+    right: 20%
+    min-width: 800px
+    max-width: 40%
+    transform: translateY(-50%);
+    max-height: 90%
+
+    h1
+      color: $default-font-color
+      font-family: $font-dance
+      font-size: 60px
+      line-height: 1em
+      font-weight: normal
+
+    p
+      color: #7d7d7d
+      margin-top: 9px
+      font-weight: normal
+      font-size: 16px
+      font-family: $font-buble
+      letter-spacing: 3px
+
+.clearfix:after
+  content: "."
+  visibility: hidden 
+  display: block
+  height: 0
+  clear: both
