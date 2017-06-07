@@ -72,12 +72,31 @@ header .info {
     text-align: center;
     font-weight: 600;
     font-size: .9em;
+    position: relative;
     border: 5px solid #fff;
     padding: 13px 43px;
-    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1); }
+    transition: all 500ms;
+    z-index: 1; }
+    header .info .info-a:after, header .info .info-a:before {
+      display: block;
+      background: #fff;
+      color: #252627;
+      width: 0;
+      height: 45px;
+      content: "";
+      position: absolute;
+      transition: all 500ms;
+      z-index: -1; }
+    header .info .info-a:after {
+      bottom: 0px;
+      left: 0px; }
+    header .info .info-a:before {
+      top: 0px;
+      right: 0px; }
+    header .info .info-a:hover:after, header .info .info-a:hover:before {
+      width: 50%; }
     header .info .info-a:hover {
-      background-color: #fff;
-      color: #252627; }
+      color: black; }
 
 header .icon-a {
   border: 5px solid #fff;
@@ -89,15 +108,16 @@ header .icon-a {
     color: #252627; }
 
 .content .inner-container {
+  height: 100px;
+  margin: auto;
   position: absolute;
-  left: 20%;
-  top: 50%;
-  right: 20%;
-  min-width: 800px;
-  max-width: 40%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 400px;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  max-height: 90%; }
+          transform: translateY(-50%); }
   .content .inner-container h1 {
     color: #fff;
     font-family: "Dancing Script", cursive;
@@ -118,5 +138,7 @@ header .icon-a {
   display: block;
   height: 0;
   clear: both; }
+  .clearfix:after canvas {
+    z-index: 9999; }
 
 /*# sourceMappingURL=main.css.map*/

@@ -25,8 +25,6 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
   display: block
 
-
-
 ol
   list-style: decimal
   padding-left: 1.4em
@@ -83,17 +81,46 @@ header
       text-align: center
       font-weight: 600
       font-size: .9em
+      position: relative
       border: 5px solid $default-font-color
       padding: 13px 43px
-      -moz-transition: all 2s cubic-bezier(.165,.84,.44,1);
-      -o-transition: all 2s cubic-bezier(.165,.84,.44,1);
-      -webkit-transition: all 2s cubic-bezier(.165,.84,.44,1);
-      transition: all 2s cubic-bezier(.165,.84,.44,1)
+      -webkit-transition: all 500ms;
+      -moz-transition: all 500ms;
+      -ms-transition: all 500ms;
+      -o-transition: all 500ms;
+      transition: all 500ms;
+      z-index: 1
 
-      &:hover
-        background-color: $default-font-color
+      &:after,
+      &:before
+        display: block
+        background: $default-font-color
         color: $default-bg-color
+        width: 0
+        height: 45px
+        content: ""
+        position: absolute
+        -webkit-transition: all 500ms;
+        -moz-transition: all 500ms;
+        -ms-transition: all 500ms;
+        -o-transition: all 500ms;
+        transition: all 500ms;
+        z-index: -1
 
+      &:after
+        bottom: 0px
+        left: 0px
+
+      &:before
+        top: 0px
+        right: 0px
+
+      &:hover:after,
+      &:hover:before
+        width: 50%
+      
+      &:hover
+        color: black
   .icon-a
     border: 5px solid $default-font-color
     padding: 13px 13px
@@ -109,15 +136,15 @@ header
 
 .content
   .inner-container
-    // height: 20rem
+    height: 100px
+    margin: auto
     position: absolute
-    left: 20%
-    top: 50%
-    right: 20%
-    min-width: 800px
-    max-width: 40%
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    width: 400px
     transform: translateY(-50%);
-    max-height: 90%
 
     h1
       color: $default-font-color
@@ -140,3 +167,6 @@ header
   display: block
   height: 0
   clear: both
+
+  canvas
+    z-index: 9999

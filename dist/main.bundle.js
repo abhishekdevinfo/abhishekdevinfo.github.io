@@ -1,18 +1,20 @@
 webpackJsonp([0],[
-/* 0 */
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(0);
+__webpack_require__(1);
 
 (function () {
     var canvas = document.querySelector('canvas');
@@ -125,5 +127,5 @@ __webpack_require__(0);
 })();
 
 /***/ })
-],[2]);
+],[4]);
 //# sourceMappingURL=main.bundle.js.map
